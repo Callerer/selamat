@@ -15,5 +15,5 @@ shape = SubResource("CircleShape2D_g2brh")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=736444466]
 texture = ExtResource("1_3vyb7")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=761923530]
-position = Vector2(-48, 14)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1527980799]
+position = Vector2(-39, 13)
