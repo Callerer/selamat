@@ -1,20 +1,77 @@
 [gd_scene format=3 uid="uid://csbwaq0s8dcy7"]
 
-[ext_resource type="Texture2D" uid="uid://f2ge3gtsxpwu" path="res://assets/img/sprite.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://d3fsrqdmfs8lp" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://c6jf8udyscead" path="res://assets/img/playermovmentsheet.png" id="2_g2els"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 136, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 0, 139, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("2_g2els")
+region = Rect2(139, 0, 139, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("2_g2els")
+region = Rect2(0, 143, 139, 143)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("2_g2els")
+region = Rect2(139, 143, 139, 143)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2brh"]
-radius = 15.6205
+radius = 8.062258
 
 [node name="Player" type="CharacterBody2D" unique_id=1258030625]
 script = ExtResource("1_g2els")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=55615524]
+position = Vector2(159.75, 185.26482)
+scale = Vector2(0.23381303, 0.2134939)
+sprite_frames = SubResource("SpriteFrames_smehm")
+animation = &"idle"
+frame_progress = 0.71232736
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=16499035]
+position = Vector2(161, 189)
 shape = SubResource("CircleShape2D_g2brh")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=736444466]
-texture = ExtResource("1_3vyb7")
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1527980799]
-position = Vector2(-49, 25)
+position = Vector2(90, 205)
 zoom = Vector2(2, 2)
+
+[node name="CoyoteTimer" type="Timer" parent="." unique_id=1315491693]
+wait_time = 0.5
+one_shot = true

@@ -7,7 +7,7 @@ func _ready() -> void:
 	fetch_words()
 
 func fetch_words():
-	var url = ""
+	var url = "https://random-words-api.kushcreates.com/api?language=es&length=6&type=capitalized&words=46"
 	http_request.request(url)
 
 func _on_wordapi_requester_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
@@ -26,7 +26,7 @@ func spawn_words():
 	for word in words:
 		var word_node = preload("res://scenes/Word.tscn").instantiate()
 		word_node.set_word(word)
-		word_node.position = Vector2(xRange, randf_range(100,500))
+		word_node.position = Vector2(xRange, randf_range(50,300))
 		xRange += 300
 		add_child(word_node)
 		
