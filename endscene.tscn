@@ -3,7 +3,22 @@
 [ext_resource type="AudioStream" uid="uid://dluqu0blw65dn" path="res://assets/end-music.mp3" id="1_iboyw"]
 [ext_resource type="Texture2D" uid="uid://sar3b6vs04fl" path="res://assets/img/ending.png" id="2_2sl72"]
 
+[sub_resource type="GDScript" id="GDScript_2sl72"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [node name="endscene" type="Node" unique_id=586771465]
+script = SubResource("GDScript_2sl72")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1431355514]
 stream = ExtResource("1_iboyw")

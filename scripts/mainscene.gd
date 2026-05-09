@@ -6,6 +6,12 @@ var words = []
 func _ready() -> void:
 	fetch_words()
 
+func _process(_delta: float) -> void:
+	var pos = $Player.position.y
+	print(pos)
+	if pos >= 575:
+		get_tree().reload_current_scene()
+
 func fetch_words():
 	var url = "https://random-words-api.kushcreates.com/api?language=es&length=6&type=capitalized&words=46"
 	http_request.request(url)
@@ -29,4 +35,6 @@ func spawn_words():
 		word_node.position = Vector2(xRange, randf_range(50,300))
 		xRange += 300
 		add_child(word_node)
+		
+
 		

@@ -17,6 +17,7 @@ offset_left = 140.0
 offset_top = 360.0
 offset_right = 212.0
 offset_bottom = 432.0
+mouse_default_cursor_shape = 2
 icon = ExtResource("2_cj833")
 icon_alignment = 1
 
