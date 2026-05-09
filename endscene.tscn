@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://c2u7mvebow64j"]
 
 [ext_resource type="AudioStream" uid="uid://dluqu0blw65dn" path="res://assets/end-music.mp3" id="1_iboyw"]
+[ext_resource type="Texture2D" uid="uid://sar3b6vs04fl" path="res://assets/img/ending.png" id="2_2sl72"]
 
 [node name="endscene" type="Node" unique_id=586771465]
-
-[node name="Label" type="Label" parent="." unique_id=798171627]
-offset_right = 1143.0
-offset_bottom = 572.0
-theme_override_font_sizes/font_size = 64
-text = "The End Yo"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1431355514]
 stream = ExtResource("1_iboyw")
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=390015573]
+offset_right = 1157.0
+offset_bottom = 646.0
+texture = ExtResource("2_2sl72")

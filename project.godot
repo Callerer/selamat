@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Selamat"
-run/main_scene="uid://bpb78l1i2n8hr"
+run/main_scene="uid://khh2tb76y8ou"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
